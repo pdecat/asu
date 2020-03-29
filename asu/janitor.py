@@ -219,3 +219,13 @@ def init():
         get_packages_targets(version)
         get_json_files(version)
         get_packages_arch(version)
+
+
+from urllib.request import HTTPSHandler
+
+opener = request.build_opener(HTTPSHandler(debuglevel=1))
+request.install_opener(opener)
+
+import logging
+
+logging.basicConfig(level=logging.DEBUG)
