@@ -176,7 +176,7 @@ def get_json_files(version: dict):
     target required for image creation.
 
     Args:
-        version (str): Version to download
+        version (dict): Version to download
     """
     version_url = current_app.config["UPSTREAM_URL"] + "/" + version.get("path")
     base_url = f"{version_url}/targets"
